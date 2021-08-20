@@ -1,0 +1,47 @@
+.container {
+ width: 380px;
+ height: 250px;
+ border: 8px solid lightgray;
+ border-radius: 5px;
+}
+
+.display {
+ width: 290px;
+ height: 35px;
+ line-height: 35px;
+ font-size: 25px;
+ background-color: black;
+ color: white;
+ margin: 15px 70px 1px 15px;
+ padding:5px;
+ text-align: right;
+}
+
+.buttons {
+width: 350px;
+height: 350px;
+display: grid;
+grid-template-rows: repeat(5,30px);/*横に30pxを5行*/
+grid-template-columns: repeat(4,75px);/*縦に75pxを４列*/
+margin: 0 15px;
+}
+
+.buttons:active {
+color: blue;
+}
+
+button {
+font-size: 18px;
+color: black;
+margin: 1px;
+border: 1px solid black;
+border-radius: 5px;
+}
+
+.buttons>.ac-btn{
+    grid-area:5/1/5/3 /*5行目1列〜5行目3列*/
+}
+
+.buttons>.ecole-btn{
+    grid-area:5/3/5/5 /*5行目3列〜5行目5列*/
+}
