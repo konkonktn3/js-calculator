@@ -43,6 +43,6 @@ border-radius: 5px;
     grid-area:5/1/5/3 /*5行目1列〜5行目3列*/
 }
 
-.buttons>.ecole-btn{
+.buttons>.equal-btn{
     grid-area:5/3/5/5 /*5行目3列〜5行目5列*/
 }
