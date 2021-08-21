@@ -1,14 +1,14 @@
-
 let display = document.getElementById("output");
 
-function set(nums){
+function set(nums) {
     display.textContent += nums.textContent;
 }
 
-function calc(){
-    display.textContent = new Function("return" + display.textContent)();
+function calc() {
+    display.textContent = new Function
+    ("return " + display.textContent)();
 }
 
-function reset(){
+function reset() {
     display.textContent = "";
 }
