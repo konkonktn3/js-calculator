@@ -7,14 +7,19 @@
    <link rel="stylesheet" href="main.css" />
 </head>
 
-<body>  
+<body>
 <div class="container">
    <div id="output" class="display"></div>
     <div class="btn_box">
+
      <button class="ac_btn" onclick="reset()">AC</button>
+
      <button onclick="set(this)">/</button>
+<!--onclickの引数にthisをつけると、戻り値を取得できる。
+基本的にthisはクリックの対象である要素の事。今回は電卓で押された数字-->
      <button onclick="set(this)">9</button>
      <button onclick="set(this)">8</button>
+
      <button onclick="set(this)">7</button>
      <button onclick="set(this)">*</button>
      <button onclick="set(this)">6</button>
@@ -24,18 +29,15 @@
      <button onclick="set(this)">3</button>
      <button onclick="set(this)">2</button>
      <button onclick="set(this)">1</button>
-     <button class="plus_btn" onclick="set(this)">+</button>
+     <button onclick="set(this)">+</button>
      <button onclick="set(this)">.</button>
      <button onclick="set(this)">0</button>
 
-     <button onclick="calc(this)">=</button>
+     <button class="equal_btn" onclick="calc(this)">=</button>
 
     </div>
 </div>
-
-
 <script src="main.js"></script>
-
 </body>
 
 </html>
