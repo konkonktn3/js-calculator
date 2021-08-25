@@ -1,13 +1,45 @@
 
 //要素を取得
 const display = document.getElementById("output");
+const operaters = document.getElementById("operater");
 
 let output = display.textContent
 
 /* その他ボタン 押されたボタンに対応した数字が追加される
-display.textContent = display.textContent + nums.textContent; */
+if:初めに０が押された時は、次のボタンが押されると0が消え次に押された数字が入る。
+else if:初めに.が押された時は、0.が初めに着くようにする。
+else:display.textContent = display.textContent + nums.textContent;*/
 function set(nums) {
-    display.textContent += nums.textContent;
+    if(display.textContent === "0"){
+       display.textContent = nums.textContent;
+    }else if(display.textContent === "."){
+       display.textContent = display.textContent.replace(/./,"0.") + nums.textContent;
+       // display.textContent = nums.textContent; →0.1を打ちたい時に打てなかった。
+    }else{
+       display.textContent += nums.textContent;
+    } 
+}
+
+//演算子と”.”を2回押せないようにする。
+function operater(nums) {
+    if(display.textContent.slice(-1) === "+"){
+       let f = display.textContent.slice(0,-1)
+        display.textContent = f + nums.textContent;
+    }else if(display.textContent.slice(-1) === '-'){
+        let f = display.textContent.slice(0,-1)
+        display.textContent = f + nums.textContent;
+    }else if(display.textContent.slice(-1) === '*'){
+        let f = display.textContent.slice(0,-1)
+        display.textContent = f + nums.textContent;
+    }else if(display.textContent.slice(-1) === '/'){
+        let f = display.textContent.slice(0,-1)
+        display.textContent = f + nums.textContent;
+    }else if(display.textContent.slice(-1) === '.'){
+        let f = display.textContent.slice(0,-1)
+        display.textContent = f + nums.textContent;
+    }else{
+        display.textContent += nums.textContent;
+    }
 }
 
 /* ＝ボタン 数式が計算される
@@ -23,4 +55,3 @@ function calc() {
 function reset() {
     display.textContent = "";
 }
-
